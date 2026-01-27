@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>PENGEMASKINIAN MAKLUMAT PEGAWAI KADER AKPS KSAB TAHUN 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    },
+                    colors: {
+                        neonBlue: "#00f3ff",
+                        neonPurple: "#bc13fe",
+                        neonGreen: "#0aff68",
+                        darkBlue: "#0f172a",
+                        glass: "rgba(255, 255, 255, 0.05)",
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up-fade': 'slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(188, 19, 254, 0.5)' },
+                            '50%': { opacity: .7, boxShadow: '0 0 10px rgba(188, 19, 254, 0.2)' },
+                        },
+                        slideUpFade: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+        body {
+            background: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+            background-color: #0f172a;
+            color: #fff;
+            overflow-x: hidden;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .floating-blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+            mix-blend-mode: screen;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .blob-1 { top: 10%; left: 5%; width: 40vw; height: 40vw; background: linear-gradient(45deg, #4f46e5, #ec4899); }
+        .blob-2 { bottom: 10%; right: 5%; width: 50vw; height: 50vw; background: linear-gradient(45deg, #06b6d4, #8b5cf6); animation-direction: reverse; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .cyber-input {
+            background: rgba(15, 23, 42, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            color: white;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .cyber-input:focus {
+            outline: none;
+            border-color: #00f3ff;
+            box-shadow: 0 0 0 3px rgba(0, 243, 255, 0.1);
+        }
+        
+        .cyber-input[readonly] {
+            background: rgba(0, 243, 255, 0.1);
+            border-color: rgba(0, 243, 255, 0.3);
+            color: #00f3ff;
+            cursor: not-allowed;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .required-star {
+            color: #ff4757;
+            margin-left: 2px;
+        }
+
+        .cyber-button {
+            position: relative;
+            background: linear-gradient(45deg, #00f3ff, #bc13fe);
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cyber-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(188, 19, 254, 0.4);
+        }
+
+        .step-bar-active {
+            background: linear-gradient(90deg, #00f3ff, #bc13fe);
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.6);
+        }
+
+        select.cyber-input { appearance: none; cursor: pointer; }
+        select.cyber-input option { background: #1e293b; color: white; }
+
+        .glitch-text { font-family: 'Orbitron', sans-serif; }
+
+        .loading-spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #00f3ff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Error state */
+        .error-input {
+            border-color: #ff4757 !important;
+            background: rgba(255, 71, 87, 0.1) !important;
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .success-check {
+            color: #0aff68;
+            font-size: 4rem;
+            animation: bounce 1s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen overflow-x-hidden">
+
+    <div class="floating-blob blob-1"></div>
+    <div class="floating-blob blob-2"></div>
+
+    <div class="container mx-auto px-4 py-8 relative z-10">
+
+        <!-- Header -->
+        <header class="mb-8">
+            <div class="glass-card p-8 mb-6 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+                        <div class="w-full max-w-[280px] md:max-w-[350px] h-auto flex items-center justify-center filter drop-shadow-[0_0_25px_rgba(0,243,255,0.4)] animate-[float_4s_ease-in-out_infinite]">
+                            <img src="logo.png" alt="Logo AKPS" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h1 class="text-2xl md:text-4xl font-heading font-bold mb-2 glitch-text uppercase tracking-tight">PENGEMASKINIAN MAKLUMAT PEGAWAI KADER</h1>
+                            <p class="text-xl md:text-2xl text-cyan-300 font-bold uppercase tracking-widest">AKPS KSAB TAHUN 2026</p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-3 rounded-full bg-white/5 border border-cyan-500/30 self-center md:self-auto">
+                        <span class="text-sm md:text-base font-bold text-cyan-300" id="dateTime"></span>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm font-bold text-cyan-300 tracking-widest">STATUS PENGISIAN</span>
+                        <span class="font-mono text-white text-lg" id="progressText">1/5 BAHAGIAN</span>
+                    </div>
+                    <div class="h-2.5 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full step-bar-active transition-all duration-700 ease-out" id="progressBar" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div class="hidden lg:block lg:col-span-1">
+                <div class="glass-card p-4 space-y-2 sticky top-8">
+                    <div class="nav-item p-4 rounded-xl bg-white/10 border border-cyan-500/50 text-cyan-300 font-bold cursor-pointer transition-all" onclick="goToStep(1)">
+                        <i class="fas fa-user-circle mr-3"></i> 1. PERIBADI
+                    </div>
+                    <div class="nav-item p-4 rounded-xl hover:bg-white/5 text-white/60 cursor-pointer transition-all" onclick="goToStep(2)">
+                        <i class="fas fa-briefcase mr-3"></i> 2. PERKHIDMATAN
+                    </div>
+                    <div class="nav-item p-4 rounded-xl hover:bg-white/5 text-white/60 cursor-pointer transition-all" onclick="goToStep(3)">
+                        <i class="fas fa-wallet mr-3"></i> 3. KEWANGAN
+                    </div>
+                    <div class="nav-item p-4 rounded-xl hover:bg-white/5 text-white/60 cursor-pointer transition-all" onclick="goToStep(4)">
+                        <i class="fas fa-users mr-3"></i> 4. WARIS
+                    </div>
+                    <div class="nav-item p-4 rounded-xl hover:bg-white/5 text-white/60 cursor-pointer transition-all" onclick="goToStep(5)">
+                        <i class="fas fa-info-circle mr-3"></i> 5. INFO+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <form id="employeeForm" class="space-y-8">
+
+                    <!-- STEP 1: PERIBADI -->
+                    <div id="step-1" class="step-content glass-card p-8 animate-slide-up-fade">
+                        <div class="border-b border-white/10 pb-4 mb-6">
+                            <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                                <span class="w-10 h-10 rounded-lg bg-cyan-600 flex items-center justify-center text-lg">1</span>
+                                MAKLUMAT PERIBADI
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="input-label">Nama Penuh <span class="required-star">*</span></label>
+                                <input type="text" name="nama" class="cyber-input" placeholder="Seperti dalam MyKad" required oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div>
+                                <label class="input-label">No. Kad Pengenalan <span class="required-star">*</span></label>
+                                <input type="text" name="ic" class="cyber-input font-mono tracking-wider" placeholder="xxxxxx-xx-xxxx" maxlength="14" required oninput="formatIC(this)">
+                            </div>
+                            <div>
+                                <label class="input-label">Jantina <span class="required-star">*</span></label>
+                                <select name="jantina" class="cyber-input" required>
+                                    <option value="">Sila Pilih</option>
+                                    <option value="LELAKI">LELAKI</option>
+                                    <option value="PEREMPUAN">PEREMPUAN</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="input-label">Negeri Asal <span class="required-star">*</span></label>
+                                <select name="negeri_asal" class="cyber-input" required>
+                                    <option value="">Sila Pilih</option>
+                                    <option value="JOHOR">JOHOR</option><option value="KEDAH">KEDAH</option><option value="KELANTAN">KELANTAN</option>
+                                    <option value="MELAKA">MELAKA</option><option value="NEGERI SEMBILAN">NEGERI SEMBILAN</option><option value="PAHANG">PAHANG</option>
+                                    <option value="PERAK">PERAK</option><option value="PERLIS">PERLIS</option><option value="PULAU PINANG">PULAU PINANG</option>
+                                    <option value="SABAH">SABAH</option><option value="SARAWAK">SARAWAK</option><option value="SELANGOR">SELANGOR</option>
+                                    <option value="TERENGGANU">TERENGGANU</option><option value="W.P. KUALA LUMPUR">W.P. KUALA LUMPUR</option>
+                                    <option value="W.P. LABUAN">W.P. LABUAN</option><option value="W.P. PUTRAJAYA">W.P. PUTRAJAYA</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="input-label">Bangsa <span class="required-star">*</span></label>
+                                <select name="bangsa" id="bangsaSelect" class="cyber-input" required onchange="toggleLainLain('bangsaSelect', 'bangsaLainWrapper')">
+                                    <option value="">Sila Pilih</option>
+                                    <option value="MELAYU">MELAYU</option>
+                                    <option value="CINA">CINA</option>
+                                    <option value="INDIA">INDIA</option>
+                                    <option value="BUMIPUTERA SABAH">BUMIPUTERA SABah</option>
+                                    <option value="BUMIPUTERA SARAWAK">BUMIPUTERA SARAWAK</option>
+                                    <option value="LAIN-LAIN">LAIN-LAIN</option>
+                                </select>
+                            </div>
+                            <div id="bangsaLainWrapper" class="hidden">
+                                <label class="input-label">Nyatakan Bangsa</label>
+                                <input type="text" name="bangsa_lain" class="cyber-input" placeholder="Sila nyatakan" oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="input-label">Emel <span class="required-star">*</span></label>
+                                <input type="email" name="email" class="cyber-input" placeholder="nama@contoh.com" required>
+                            </div>
+                            <div>
+                                <label class="input-label">No. Telefon <span class="required-star">*</span></label>
+                                <input type="tel" name="telefon" class="cyber-input" placeholder="01XXXXXXXXX" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="input-label">Alamat Kediaman <span class="required-star">*</span></label>
+                                <textarea name="alamat" class="cyber-input min-h-[80px]" required oninput="this.value = this.value.toUpperCase()"></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <input type="checkbox" name="tinggal_kuarters" id="checkKuarters" class="w-5 h-5 accent-cyan-500" onchange="toggleKuarters()">
+                                    <label for="checkKuarters" class="text-sm md:text-base cursor-pointer select-none text-white/80">Saya tinggal di Kuarters Kerajaan</label>
+                                </div>
+                                <div id="kuartersWrapper" class="hidden mt-4">
+                                    <label class="input-label">Alamat Kuarters</label>
+                                    <textarea name="alamat_kuarters" class="cyber-input min-h-[80px]" oninput="this.value = this.value.toUpperCase()"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="md:col-span-2 pt-6 border-t border-white/10 mt-4">
+                                <h3 class="text-cyan-300 font-bold mb-4 flex items-center gap-2">
+                                    <i class="fas fa-child"></i> MAKLUMAT TANGGUNGAN
+                                </h3>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="input-label">Bil. Anak Kandung</label>
+                                        <input type="number" name="anak_kandung" class="cyber-input" placeholder="0" min="0" value="0">
+                                    </div>
+                                    <div>
+                                        <label class="input-label">Bil. Anak Angkat</label>
+                                        <input type="number" name="anak_angkat" class="cyber-input" placeholder="0" min="0" value="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: PERKHIDMATAN -->
+                    <div id="step-2" class="step-content glass-card p-8 hidden animate-slide-up-fade">
+                        <div class="border-b border-white/10 pb-4 mb-6">
+                            <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                                <span class="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center text-lg">2</span>
+                                MAKLUMAT PERKHIDMATAN
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="input-label">Agensi Asal (Sebelum AKPS) <span class="required-star">*</span></label>
+                                <select name="agensi_asal" id="agensiAsalSelect" class="cyber-input" required onchange="toggleAgensi()">
+                                    <option value="">Sila Pilih</option>
+                                    <option value="JABATAN IMIGRESEN MALAYSIA (JIM)">JABATAN IMIGRESEN MALAYSIA (JIM)</option>
+                                    <option value="JABATAN KASTAM DIRAJA MALAYSIA (JKDM)">JABATAN KASTAM DIRAJA MALAYSIA (JKDM)</option>
+                                    <option value="JABATAN PENGANGKUTAN JALAN (JPJ)">JABATAN PENGANGKUTAN JALAN (JPJ)</option>
+                                    <option value="JABATAN PERKHIDMATAN KUARANTIN DAN PEMERIKSAAN MALAYSIA (MAQIS)">JABATAN PERKHIDMATAN KUARANTIN DAN PEMERIKSAAN MALAYSIA (MAQIS)</option>
+                                    <option value="KEMENTERIAN DALAM NEGERI (KDN)">KEMENTERIAN DALAM NEGERI (KDN)</option>
+                                    <option value="LAIN-LAIN">LAIN-LAIN</option>
+                                </select>
+                            </div>
+                            <div id="agensiAsalLainWrapper" class="hidden md:col-span-2">
+                                <label class="input-label">Nyatakan Agensi Asal</label>
+                                <input type="text" name="agensi_asal_lain" class="cyber-input" placeholder="Sila nyatakan" oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div id="unitOperasiWrapper" class="hidden md:col-span-2">
+                                <label class="input-label text-cyan-300">UNIT OPERASI / SEKTOR <span class="required-star">*</span></label>
+                                <select name="unit_operasi" class="cyber-input border-cyan-500/50">
+                                    <option value="">Sila Pilih Unit</option>
+                                    <optgroup label="JABATAN IMIGRESEN (JIM)">
+                                        <option value="UOA">UOA</option><option value="UOB">UOB</option><option value="UOC">UOC</option>
+                                        <option value="UOD">UOD</option><option value="UKO">UKO</option><option value="UPK">UPK</option>
+                                        <option value="UTMR">UTMR</option><option value="UKK">UKK</option><option value="UIP">UIP</option>
+                                        <option value="UKP I">UKP I</option><option value="UKP II">UKP II</option><option value="UCK">UCK</option>
+                                    </optgroup>
+                                    <optgroup label="KASTAM (JKDM)">
+                                        <option value="CPP-A">CPP-A</option><option value="CPP-B">CPP-B</option><option value="CPP-C">CPP-C</option><option value="CPP-D">CPP-D</option>
+                                        <option value="IMPORT-A">IMPORT-A</option><option value="IMPORT-B">IMPORT-B</option><option value="IMPORT-C">IMPORT-C</option><option value="IMPORT-D">IMPORT-D</option>
+                                        <option value="EKSPORT-A">EKSPORT-A</option><option value="EKSPORT-B">EKSPORT-B</option><option value="EKSPORT-C">EKSPORT-C</option><option value="EKSPORT-D">EKSPORT-D</option>
+                                    </optgroup>
+                                    <optgroup label="LAIN-LAIN">
+                                        <option value="MAQIS">MAQIS</option>
+                                        <option value="JPJ">JPJ</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="input-label">Jawatan Hakiki <span class="required-star">*</span></label>
+                                <input type="text" name="jawatan" class="cyber-input" required oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div>
+                                <label class="input-label">Gred Jawatan <span class="required-star">*</span></label>
+                                <input type="text" name="gred" class="cyber-input uppercase" placeholder="Contoh: N41" required oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div>
+                                <label class="input-label">Bahagian <span class="required-star">*</span></label>
+                                <select name="bahagian" class="cyber-input" required>
+                                    <option value="">Sila Pilih</option>
+                                    <option value="KAWALAN - JIM">KAWALAN - JIM</option>
+                                    <option value="PENTADBIRAN-JIM">PENTADBIRAN-JIM</option>
+                                    <option value="PENGUATKUASA-JIM">PENGUATKUASA-JIM</option>
+                                    <option value="CPP-JKDM">CPP-JKDM</option>
+                                    <option value="CBM-IMPORT-JKDM">CBM-IMPORT-JKDM</option>
+                                    <option value="CBM-EKSPORT-JKDM">CBM-EKSPORT-JKDM</option>
+                                    <option value="JPJ">JPJ</option>
+                                    <option value="MAQIS">MAQIS</option>
+                                </select>
+                            </div>
+
+                            <!-- PENEMPATAN SEBELUM KSAB (PILIHAN DINAMIK) -->
+                            <div class="md:col-span-2 mt-4 border-t border-white/10 pt-6">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <input type="checkbox" id="checkPenempatan" class="w-6 h-6 accent-cyan-500 cursor-pointer" onchange="togglePenempatanLanjut()">
+                                    <label for="checkPenempatan" class="text-base font-bold text-cyan-300 cursor-pointer select-none">
+                                        SAYA MEMPUNYAI SEJARAH PENEMPATAN SEBELUM KE KSAB
+                                    </label>
+                                </div>
+
+                                <div id="penempatanLanjutWrapper" class="hidden space-y-8 animate-slide-up-fade">
+                                    <!-- Penempatan 1 -->
+                                    <div class="glass-card bg-white/5 p-6 border border-cyan-500/20">
+                                        <h4 class="text-white font-bold mb-4 flex items-center gap-2">
+                                            <span class="w-6 h-6 rounded bg-cyan-600 text-[10px] flex items-center justify-center">1</span>
+                                            MAKLUMAT PENEMPATAN 1
+                                        </h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                            <div class="md:col-span-1">
+                                                <label class="input-label">Lokasi Penempatan</label>
+                                                <input type="text" name="p1_lokasi" class="cyber-input" placeholder="Contoh: KLIA" oninput="this.value = this.value.toUpperCase()">
+                                            </div>
+                                            <div>
+                                                <label class="input-label">Tarikh Mula</label>
+                                                <input type="date" name="p1_tarikh_mula" class="cyber-input">
+                                            </div>
+                                            <div>
+                                                <label class="input-label">Tarikh Akhir</label>
+                                                <input type="date" name="p1_tarikh_akhir" class="cyber-input">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Penempatan 2 -->
+                                    <div class="glass-card bg-white/5 p-6 border border-cyan-500/20">
+                                        <h4 class="text-white font-bold mb-4 flex items-center gap-2">
+                                            <span class="w-6 h-6 rounded bg-cyan-600 text-[10px] flex items-center justify-center">2</span>
+                                            MAKLUMAT PENEMPATAN 2
+                                        </h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                            <div class="md:col-span-1">
+                                                <label class="input-label">Lokasi Penempatan</label>
+                                                <input type="text" name="p2_lokasi" class="cyber-input" placeholder="Contoh: BSI" oninput="this.value = this.value.toUpperCase()">
+                                            </div>
+                                            <div>
+                                                <label class="input-label">Tarikh Mula</label>
+                                                <input type="date" name="p2_tarikh_mula" class="cyber-input">
+                                            </div>
+                                            <div>
+                                                <label class="input-label">Tarikh Akhir</label>
+                                                <input type="date" name="p2_tarikh_akhir" class="cyber-input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="input-label">Status <span class="required-star">*</span></label>
+                                <select name="status" id="statusSelect" class="cyber-input" required onchange="handleStatusChange()">
+                                    <option value="">Sila Pilih</option>
+                                    <option value="AKTIF">AKTIF</option>
+                                    <option value="CMA">CMA</option>
+                                    <option value="CB">CB</option>
+                                    <option value="CTG">CTG</option>
+                                    <option value="LAIN-LAIN">LAIN-LAIN</option>
+                                </select>
+                            </div>
+                            <div id="statusLainWrapper" class="hidden">
+                                <label class="input-label">Nyatakan Status</label>
+                                <input type="text" name="status_lain" class="cyber-input" oninput="this.value = this.value.toUpperCase()">
+                            </div>
+
+                            <!-- TARIKH STATUS (UNTUK CMA, CB, CTG, LAIN-LAIN) -->
+                            <div id="statusDateWrapper" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="input-label">Tarikh Mula Status</label>
+                                    <input type="date" name="status_tarikh_mula" class="cyber-input">
+                                </div>
+                                <div>
+                                    <label class="input-label">Tarikh Tamat Status</label>
+                                    <input type="date" name="status_tarikh_tamat" class="cyber-input">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="input-label">Tarikh Lantikan Pertama <span class="required-star">*</span></label>
+                                <input type="date" name="tarikh_lantikan" class="cyber-input" required>
+                            </div>
+                            <div>
+                                <label class="input-label">Tarikh Lapor Diri KSAB <span class="required-star">*</span></label>
+                                <input type="date" name="tarikh_lapor_diri" class="cyber-input" required>
+                            </div>
+                            <div>
+                                <label class="input-label text-cyan-300">Tarikh Bersara (Auto 60 Tahun)</label>
+                                <input type="text" name="tarikh_bersara" id="tarikhBersara" class="cyber-input font-bold" readonly placeholder="Akan dikira dari No. KP...">
+                            </div>
+                            <div>
+                                <label class="input-label">Bulan KGT <span class="required-star">*</span></label>
+                                <select name="bulan_kgt" class="cyber-input" required>
+                                    <option value="">Sila Pilih</option>
+                                    <option value="JANUARI">JANUARI</option><option value="APRIL">APRIL</option>
+                                    <option value="JULAI">JULAI</option><option value="OKTOBER">OKTOBER</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: KEWANGAN -->
+                    <div id="step-3" class="step-content glass-card p-8 hidden animate-slide-up-fade">
+                        <div class="border-b border-white/10 pb-4 mb-6">
+                            <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                                <span class="w-10 h-10 rounded-lg bg-green-600 flex items-center justify-center text-lg">3</span>
+                                MAKLUMAT KEWANGAN (GAJI)
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="input-label">Nama Bank</label>
+                                <select name="bank" id="bankSelect" class="cyber-input" required onchange="toggleLainLain('bankSelect', 'bankLainWrapper')">
+                                    <option value="">Sila Pilih</option>
+                                    <option value="MAYBANK">MAYBANK</option><option value="CIMB BANK">CIMB BANK</option><option value="BANK ISLAM">BANK ISLAM</option>
+                                    <option value="RHB BANK">RHB BANK</option><option value="BANK RAKYAT">BANK RAKYAT</option><option value="BSN">BSN</option>
+                                    <option value="PUBLIC BANK">PUBLIC BANK</option><option value="LAIN-LAIN">LAIN-LAIN</option>
+                                </select>
+                            </div>
+                            <div id="bankLainWrapper" class="hidden md:col-span-2">
+                                <label class="input-label">Nyatakan Nama Bank</label>
+                                <input type="text" name="bank_lain" class="cyber-input" oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div>
+                                <label class="input-label">No. Akaun (Tanpa Sengkang)</label>
+                                <input type="text" name="no_akaun" class="cyber-input" required>
+                            </div>
+                            <div>
+                                <label class="input-label">No. Gaji (SG)</label>
+                                <input type="text" name="no_gaji" class="cyber-input" required oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div>
+                                <label class="input-label">Gaji Pokok (RM)</label>
+                                <input type="number" name="gaji_pokok" class="cyber-input" step="0.01" placeholder="0.00" value="0">
+                            </div>
+                            <div>
+                                <label class="input-label">IMBUHAN TETAP PERUMAHAN (ITP)</label>
+                                <input type="number" name="itp" class="cyber-input" step="0.01" placeholder="0.00" value="0">
+                            </div>
+                            <div>
+                                <label class="input-label">IMBUHAN TETAP KHIDMAT AWAM (ITKA)</label>
+                                <input type="number" name="itka" class="cyber-input" step="0.01" placeholder="0.00" value="0">
+                            </div>
+                            <div>
+                                <label class="input-label">BANTUAN SARA HIDUP (COLA)</label>
+                                <input type="number" name="bis" class="cyber-input" step="0.01" placeholder="0.00" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: WARIS -->
+                    <div id="step-4" class="step-content glass-card p-8 hidden animate-slide-up-fade">
+                        <div class="border-b border-white/10 pb-4 mb-6">
+                            <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                                <span class="w-10 h-10 rounded-lg bg-orange-600 flex items-center justify-center text-lg">4</span>
+                                MAKLUMAT WARIS
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="input-label">Nama Waris</label>
+                                <input type="text" name="nama_waris" class="cyber-input" required oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div>
+                                <label class="input-label">Hubungan</label>
+                                <select name="hubungan" class="cyber-input" required>
+                                    <option value="">Sila Pilih</option>
+                                    <option value="SUAMI/ISTERI">SUAMI/ISTERI</option><option value="IBU/BAPA">IBU/BAPA</option>
+                                    <option value="ANAK">ANAK</option><option value="ADIK-BERADIK">ADIK-BERADIK</option>
+                                    <option value="LAIN-LAIN">LAIN-LAIN</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="input-label">No. Telefon Waris</label>
+                                <input type="tel" name="telefon_waris" class="cyber-input" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="input-label">Pekerjaan Waris</label>
+                                <input type="text" name="pekerjaan_waris" class="cyber-input" oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="input-label">Alamat Waris</label>
+                                <textarea name="alamat_waris" class="cyber-input min-h-[80px]" required oninput="this.value = this.value.toUpperCase()"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: INFO+ -->
+                    <div id="step-5" class="step-content glass-card p-8 hidden animate-slide-up-fade">
+                        <div class="border-b border-white/10 pb-4 mb-6">
+                            <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                                <span class="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-lg">5</span>
+                                PENDIDIKAN & KESIHATAN
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="input-label">Pendidikan Tertinggi</label>
+                                <select name="pendidikan" class="cyber-input" required>
+                                    <option value="">Sila Pilih</option>
+                                    <option value="SPM">SPM</option><option value="STPM">STPM</option><option value="SIJIL">SIJIL</option>
+                                    <option value="DIPLOMA">DIPLOMA</option><option value="IJAZAH">IJAZAH</option><option value="MASTER">MASTER</option><option value="PHD">PHD</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="input-label">Jurusan</label>
+                                <input type="text" name="jurusan" class="cyber-input" required oninput="this.value = this.value.toUpperCase()">
+                            </div>
+                            <div class="md:col-span-2 pt-6">
+                                <h3 class="text-cyan-300 font-bold mb-4 flex items-center gap-2">
+                                    <i class="fas fa-notes-medical"></i> REKOD KESIHATAN (JIKA ADA)
+                                </h3>
+                                <div class="grid grid-cols-1 gap-4">
+                                    <input type="text" name="penyakit_1" class="cyber-input" placeholder="Nama Penyakit / Keadaan 1" oninput="this.value = this.value.toUpperCase()">
+                                    <input type="text" name="penyakit_2" class="cyber-input" placeholder="Nama Penyakit / Keadaan 2" oninput="this.value = this.value.toUpperCase()">
+                                    <input type="text" name="penyakit_3" class="cyber-input" placeholder="Nama Penyakit / Keadaan 3" oninput="this.value = this.value.toUpperCase()">
+                                    <input type="text" name="penyakit_4" class="cyber-input" placeholder="Nama Penyakit / Keadaan 4" oninput="this.value = this.value.toUpperCase()">
+                                    <input type="text" name="penyakit_5" class="cyber-input" placeholder="Nama Penyakit / Keadaan 5" oninput="this.value = this.value.toUpperCase()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="fixed bottom-0 left-0 w-full px-6 py-6 pb-8 bg-[#0f172a]/95 backdrop-blur-xl border-t border-white/10 z-30 flex justify-between lg:relative lg:bg-transparent lg:border-none lg:p-0 lg:mt-12">
+                    <button id="prevBtn" onclick="changeStep(-1)" class="hidden px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 font-bold transition-all uppercase tracking-widest text-sm">
+                        <i class="fas fa-arrow-left mr-2"></i> KEMBALI
+                    </button>
+                    <div class="flex-1"></div>
+                    <button id="nextBtn" onclick="changeStep(1)" class="cyber-button px-10 py-4 text-sm tracking-widest">
+                        SETERUSNYA <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button id="submitBtn" onclick="submitForm()" class="cyber-button bg-gradient-to-r from-green-500 to-emerald-600 hidden px-12 py-4 text-sm tracking-widest">
+                        <i class="fas fa-paper-plane mr-2"></i> HANTAR DATA
+                    </button>
+                </div>
+                <div class="h-32 lg:hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/95">
+        <div class="text-center">
+            <div class="loading-spinner mx-auto mb-6 scale-150"></div>
+            <h3 class="text-2xl font-bold text-cyan-300 tracking-widest animate-pulse">SEDANG MEMPROSES DATA...</h3>
+            <p class="text-white/40 mt-2">Sila jangan tutup pelayar anda.</p>
+        </div>
+    </div>
+
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/90 px-4">
+        <div class="bg-slate-900 border border-cyan-500/30 p-10 rounded-3xl max-w-sm w-full text-center shadow-[0_0_50px_rgba(0,243,255,0.2)]">
+            <div class="text-6xl mb-6 animate-bounce">✨</div>
+            <h2 class="text-3xl font-bold text-white mb-3">BERJAYA!</h2>
+            <p class="text-white/60 mb-8 leading-relaxed">Data pengemaskinian anda telah selamat disimpan dalam pangkalan data AKPS.</p>
+            <button onclick="window.location.reload()" class="w-full py-4 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 font-bold text-cyan-300 border border-cyan-500/30 transition-all">KEMBALI KE UTAMA</button>
+        </div>
+    </div>
+
+    <div id="errorModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/90 px-4">
+        <div class="bg-slate-900 border border-red-500/30 p-10 rounded-3xl max-w-sm w-full text-center shadow-[0_0_50px_rgba(255,71,87,0.2)]">
+            <div class="text-6xl mb-6 text-red-500">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-white mb-3">RALAT!</h2>
+            <p id="errorMessage" class="text-white/60 mb-8 leading-relaxed">Maaf, terdapat ralat ketika menghantar data. Sila cuba lagi.</p>
+            <button onclick="closeErrorModal()" class="w-full py-4 rounded-xl bg-red-500/10 hover:bg-red-500/20 font-bold text-red-300 border border-red-500/30 transition-all">TUTUP</button>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // GOOGLE SCRIPT URL - PASTIKAN URL BETUL
+        // ============================================
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHILT-O-ihywYWcnUFEZc4cmPfqZmrnqbtBsw1mBNXKDKAShaWPEkOtA82fPJGaCkkdw/exec';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(() => {
+                const now = new Date();
+                document.getElementById('dateTime').innerText = now.toLocaleDateString('ms-MY', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                }) + ' | ' + now.toLocaleTimeString('en-GB', { 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit' 
+                });
+            }, 1000);
+            
+            // Set default values for number inputs
+            setDefaultValues();
+        });
+
+        function setDefaultValues() {
+            // Set default 0 for all number inputs
+            const numberInputs = document.querySelectorAll('input[type="number"]');
+            numberInputs.forEach(input => {
+                if (!input.value) input.value = "0";
+            });
+        }
+
+        function toggleLainLain(selectId, targetId) {
+            const val = document.getElementById(selectId).value;
+            const target = document.getElementById(targetId);
+            if (val === 'LAIN-LAIN') target.classList.remove('hidden');
+            else target.classList.add('hidden');
+        }
+
+        function handleStatusChange() {
+            const val = document.getElementById('statusSelect').value;
+            const lainWrapper = document.getElementById('statusLainWrapper');
+            const dateWrapper = document.getElementById('statusDateWrapper');
+
+            if (val === 'LAIN-LAIN') lainWrapper.classList.remove('hidden');
+            else lainWrapper.classList.add('hidden');
+
+            if (['CMA', 'CB', 'CTG', 'LAIN-LAIN'].includes(val)) {
+                dateWrapper.classList.remove('hidden');
+            } else {
+                dateWrapper.classList.add('hidden');
+            }
+        }
+
+        function toggleAgensi() {
+            const select = document.getElementById('agensiAsalSelect');
+            const val = select.value;
+            const lainWrapper = document.getElementById('agensiAsalLainWrapper');
+            const unitWrapper = document.getElementById('unitOperasiWrapper');
+            const unitSelect = document.querySelector('[name="unit_operasi"]');
+
+            if (val === 'LAIN-LAIN') lainWrapper.classList.remove('hidden');
+            else lainWrapper.classList.add('hidden');
+
+            if (val !== "") {
+                unitWrapper.classList.remove('hidden');
+                unitSelect.setAttribute('required', 'true');
+            } else {
+                unitWrapper.classList.add('hidden');
+                unitSelect.removeAttribute('required');
+                unitSelect.value = "";
+            }
+        }
+
+        function toggleKuarters() {
+            const check = document.getElementById('checkKuarters');
+            const wrap = document.getElementById('kuartersWrapper');
+            if (check.checked) wrap.classList.remove('hidden');
+            else wrap.classList.add('hidden');
+        }
+
+        function togglePenempatanLanjut() {
+            const check = document.getElementById('checkPenempatan');
+            const wrap = document.getElementById('penempatanLanjutWrapper');
+            if (check.checked) wrap.classList.remove('hidden');
+            else wrap.classList.add('hidden');
+        }
+
+        function formatIC(target) {
+            let val = target.value.replace(/\D/g, '');
+            calculateRetirement(val);
+            if(val.length > 12) val = val.substring(0,12);
+            if(val.length > 6) val = val.substring(0,6) + '-' + val.substring(6);
+            if(val.length > 9) val = val.substring(0,9) + '-' + val.substring(9);
+            target.value = val;
+        }
+
+        function calculateRetirement(rawIc) {
+            if (!rawIc || rawIc.length < 6) {
+                document.getElementById('tarikhBersara').value = "";
+                return;
+            }
+            
+            try {
+                const yearPart = parseInt(rawIc.substring(0, 2));
+                const monthPart = parseInt(rawIc.substring(2, 4));
+                const dayPart = parseInt(rawIc.substring(4, 6));
+
+                if (isNaN(yearPart) || monthPart < 1 || monthPart > 12 || dayPart < 1 || dayPart > 31) {
+                    document.getElementById('tarikhBersara').value = "";
+                    return;
+                }
+
+                const currentYearShort = new Date().getFullYear() % 100;
+                let fullYear = yearPart > currentYearShort ? 1900 + yearPart : 2000 + yearPart;
+                const retirementYear = fullYear + 60;
+                
+                // Format: YYYY-MM-DD untuk Google Sheets
+                const formattedDate = retirementYear + "-" + 
+                                     monthPart.toString().padStart(2, '0') + "-" + 
+                                     dayPart.toString().padStart(2, '0');
+                
+                document.getElementById('tarikhBersara').value = formattedDate;
+                console.log("Tarikh Bersara dikira:", formattedDate);
+                
+            } catch (error) {
+                console.error("Error calculating retirement:", error);
+                document.getElementById('tarikhBersara').value = "";
+            }
+        }
+
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function goToStep(step) {
+            if (step < currentStep || validateStep()) {
+                showStep(step);
+            } else {
+                highlightEmptyFields();
+                alert("Sila lengkapkan semua ruangan bertanda (*) sebelum ke bahagian seterusnya.");
+            }
+        }
+
+        function changeStep(dir) {
+            if (dir === 1 && !validateStep()) {
+                highlightEmptyFields();
+                alert("Sila lengkapkan semua maklumat bertanda (*)");
+                return;
+            }
+            showStep(currentStep + dir);
+        }
+
+        function highlightEmptyFields() {
+            const content = document.getElementById(`step-${currentStep}`);
+            const inputs = content.querySelectorAll('[required]');
+            
+            inputs.forEach(input => {
+                if (input.offsetParent !== null && !input.value.trim()) {
+                    input.classList.add('error-input');
+                    setTimeout(() => {
+                        input.classList.remove('error-input');
+                    }, 3000);
+                }
+            });
+        }
+
+        function validateStep() {
+            const content = document.getElementById(`step-${currentStep}`);
+            const inputs = content.querySelectorAll('[required]');
+            let valid = true;
+            
+            inputs.forEach(input => {
+                // Skip hidden inputs
+                if (input.offsetParent === null) return;
+                
+                // Check if input has value
+                if (!input.value.trim()) {
+                    valid = false;
+                }
+                
+                // Special validation for email
+                if (input.type === 'email' && input.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value)) {
+                        valid = false;
+                        input.classList.add('error-input');
+                    }
+                }
+            });
+            
+            return valid;
+        }
+
+        function showStep(step) {
+            if (step < 1 || step > totalSteps) return;
+            
+            // Hide current step
+            document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            
+            // Show new step
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+            currentStep = step;
+            
+            updateUI();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateUI() {
+            const pct = (currentStep / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = `${pct}%`;
+            document.getElementById('progressText').innerText = `${currentStep}/${totalSteps} BAHAGIAN`;
+
+            document.getElementById('prevBtn').classList.toggle('hidden', currentStep === 1);
+            document.getElementById('nextBtn').classList.toggle('hidden', currentStep === totalSteps);
+            document.getElementById('submitBtn').classList.toggle('hidden', currentStep !== totalSteps);
+
+            document.querySelectorAll('.nav-item').forEach((el, idx) => {
+                if (idx + 1 === currentStep) {
+                    el.classList.add('text-cyan-300', 'bg-white/10', 'border', 'border-cyan-500/50', 'scale-105');
+                    el.classList.remove('text-white/60');
+                } else {
+                    el.classList.remove('text-cyan-300', 'bg-white/10', 'border', 'border-cyan-500/50', 'scale-105');
+                    el.classList.add('text-white/60');
+                }
+            });
+        }
+
+        function closeErrorModal() {
+            document.getElementById('errorModal').classList.add('hidden');
+        }
+
+        function showError(message) {
+            document.getElementById('errorMessage').textContent = message;
+            document.getElementById('errorModal').classList.remove('hidden');
+        }
+
+        async function submitForm() {
+            if (!validateStep()) {
+                alert("Sila lengkapkan semua maklumat sebelum menghantar.");
+                return;
+            }
+
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> MENGHANTAR...';
+            btn.disabled = true;
+            
+            document.getElementById('loadingOverlay').classList.remove('hidden');
+
+            try {
+                // Prepare form data
+                const formData = new FormData(document.getElementById('employeeForm'));
+                const data = Object.fromEntries(formData.entries());
+                
+                // Process boolean values
+                data.tinggal_kuarters = document.getElementById('checkKuarters').checked;
+                data.mempunyai_sejarah_penempatan = document.getElementById('checkPenempatan').checked;
+                
+                // Calculate total salary
+                const gp = parseFloat(data.gaji_pokok) || 0;
+                const itp = parseFloat(data.itp) || 0;
+                const itka = parseFloat(data.itka) || 0;
+                const bis = parseFloat(data.bis) || 0;
+                data.jumlah_gaji = (gp + itp + itka + bis).toFixed(2);
+                
+                console.log("Data yang akan dihantar:", data);
+                
+                // Send to Google Apps Script
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                console.log("Response dari server:", result);
+                
+                if (result.status === 'success') {
+                    document.getElementById('loadingOverlay').classList.add('hidden');
+                    document.getElementById('successModal').classList.remove('hidden');
+                } else {
+                    throw new Error(result.message || 'Unknown error from server');
+                }
+                
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                
+                document.getElementById('loadingOverlay').classList.add('hidden');
+                
+                let errorMessage = "Ralat sambungan. Sila cuba lagi.";
+                if (error.message.includes('Failed to fetch')) {
+                    errorMessage = "Tidak dapat menghubungi server. Sila semak sambungan internet anda.";
+                } else if (error.message.includes('405')) {
+                    errorMessage = "Ralat server. Sila hubungi pentadbir sistem.";
+                }
+                
+                showError(errorMessage);
+                
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
