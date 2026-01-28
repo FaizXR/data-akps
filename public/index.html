@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>PENGEMASKINIAN MAKLUMAT PEGAWAI KADER AKPS KSAB TAHUN 2026</title>
+    <!-- Tailwind CSS via CDN (Development Only - For production consider local build) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -206,7 +207,7 @@
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div class="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
                         <div class="w-full max-w-[280px] md:max-w-[350px] h-auto flex items-center justify-center filter drop-shadow-[0_0_25px_rgba(0,243,255,0.4)] animate-[float_4s_ease-in-out_infinite]">
-                            <img src="logo.png" alt="Logo AKPS" class="w-full h-full object-contain">
+                            <img src="logo.png" alt="Logo AKPS" class="w-full h-full object-contain" onerror="this.style.display='none'">
                         </div>
                         <div>
                             <h1 class="text-2xl md:text-4xl font-heading font-bold mb-2 glitch-text uppercase tracking-tight">PENGEMASKINIAN MAKLUMAT PEGAWAI KADER</h1>
@@ -298,7 +299,7 @@
                                     <option value="MELAYU">MELAYU</option>
                                     <option value="CINA">CINA</option>
                                     <option value="INDIA">INDIA</option>
-                                    <option value="BUMIPUTERA SABAH">BUMIPUTERA SABah</option>
+                                    <option value="BUMIPUTERA SABAH">BUMIPUTERA SABAH</option>
                                     <option value="BUMIPUTERA SARAWAK">BUMIPUTERA SARAWAK</option>
                                     <option value="LAIN-LAIN">LAIN-LAIN</option>
                                 </select>
@@ -316,7 +317,7 @@
                                 <input type="tel" name="telefon" class="cyber-input" placeholder="01XXXXXXXXX" required>
                             </div>
                             <div class="md:col-span-2">
-                                <label class="input-label">Alamat Kediaman <span class="required-star">*</span></label>
+                                <label class="input-label">Alamat Kediaman (ikut ic) <span class="required-star">*</span></label>
                                 <textarea name="alamat" class="cyber-input min-h-[80px]" required oninput="this.value = this.value.toUpperCase()"></textarea>
                             </div>
                             <div class="md:col-span-2">
@@ -340,7 +341,7 @@
                                         <input type="number" name="anak_kandung" class="cyber-input" placeholder="0" min="0" value="0">
                                     </div>
                                     <div>
-                                        <label class="input-label">Bil. Anak Angkat</label>
+                                        <label class="input-label">Bil. Anak Angkat dan Lain-lain</label>
                                         <input type="number" name="anak_angkat" class="cyber-input" placeholder="0" min="0" value="0">
                                     </div>
                                 </div>
@@ -365,7 +366,6 @@
                                     <option value="JABATAN KASTAM DIRAJA MALAYSIA (JKDM)">JABATAN KASTAM DIRAJA MALAYSIA (JKDM)</option>
                                     <option value="JABATAN PENGANGKUTAN JALAN (JPJ)">JABATAN PENGANGKUTAN JALAN (JPJ)</option>
                                     <option value="JABATAN PERKHIDMATAN KUARANTIN DAN PEMERIKSAAN MALAYSIA (MAQIS)">JABATAN PERKHIDMATAN KUARANTIN DAN PEMERIKSAAN MALAYSIA (MAQIS)</option>
-                                    <option value="KEMENTERIAN DALAM NEGERI (KDN)">KEMENTERIAN DALAM NEGERI (KDN)</option>
                                     <option value="LAIN-LAIN">LAIN-LAIN</option>
                                 </select>
                             </div>
@@ -381,9 +381,11 @@
                                         <option value="UOA">UOA</option><option value="UOB">UOB</option><option value="UOC">UOC</option>
                                         <option value="UOD">UOD</option><option value="UKO">UKO</option><option value="UPK">UPK</option>
                                         <option value="UTMR">UTMR</option><option value="UKK">UKK</option><option value="UIP">UIP</option>
-                                        <option value="UKP I">UKP I</option><option value="UKP II">UKP II</option><option value="UCK">UCK</option>
+                                        <option value="UKP I">UKP I</option><option value="UKP II">UKP II</option><option value="UCK-PENTADBIRAN">UCK-PENTADBIRAN</option>
+                                        <option value="UCK-A">UCK-A</option><option value="UCK-B">UCK-B</option><option value="UCK-C">UCK-C</option><option value="UCK-D">UCK-D</option>
                                     </optgroup>
                                     <optgroup label="KASTAM (JKDM)">
+                                        <option value="JKDM-URUSETIA">JKDM-URUSETIA</option>
                                         <option value="CPP-A">CPP-A</option><option value="CPP-B">CPP-B</option><option value="CPP-C">CPP-C</option><option value="CPP-D">CPP-D</option>
                                         <option value="IMPORT-A">IMPORT-A</option><option value="IMPORT-B">IMPORT-B</option><option value="IMPORT-C">IMPORT-C</option><option value="IMPORT-D">IMPORT-D</option>
                                         <option value="EKSPORT-A">EKSPORT-A</option><option value="EKSPORT-B">EKSPORT-B</option><option value="EKSPORT-C">EKSPORT-C</option><option value="EKSPORT-D">EKSPORT-D</option>
@@ -407,8 +409,9 @@
                                 <select name="bahagian" class="cyber-input" required>
                                     <option value="">Sila Pilih</option>
                                     <option value="KAWALAN - JIM">KAWALAN - JIM</option>
-                                    <option value="PENTADBIRAN-JIM">PENTADBIRAN-JIM</option>
+                                    <option value="PENTADBIRAN-JIM (UIP,UKO,UCK,UKP,UTMR,UKK)">PENTADBIRAN-JIM (UIP,UKO,UCK,UKP,UTMR,UKK)</option>
                                     <option value="PENGUATKUASA-JIM">PENGUATKUASA-JIM</option>
+                                    <option value="JKDM-URUSETUA">JKDM-URUSETIA</option>
                                     <option value="CPP-JKDM">CPP-JKDM</option>
                                     <option value="CBM-IMPORT-JKDM">CBM-IMPORT-JKDM</option>
                                     <option value="CBM-EKSPORT-JKDM">CBM-EKSPORT-JKDM</option>
@@ -578,12 +581,12 @@
                         <div class="border-b border-white/10 pb-4 mb-6">
                             <h2 class="text-2xl font-bold text-white flex items-center gap-3">
                                 <span class="w-10 h-10 rounded-lg bg-orange-600 flex items-center justify-center text-lg">4</span>
-                                MAKLUMAT WARIS
+                                MAKLUMAT WARIS/KELUARGA
                             </h2>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="md:col-span-2">
-                                <label class="input-label">Nama Waris</label>
+                                <label class="input-label">Nama Waris/Keluarga</label>
                                 <input type="text" name="nama_waris" class="cyber-input" required oninput="this.value = this.value.toUpperCase()">
                             </div>
                             <div>
@@ -695,9 +698,9 @@
 
     <script>
         // ============================================
-        // GOOGLE SCRIPT URL - PASTIKAN URL BETUL
+        // PENTING: GANTIKAN URL INI SETELAH DEPLOY GOOGLE SCRIPT BARU
         // ============================================
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHILT-O-ihywYWcnUFEZc4cmPfqZmrnqbtBsw1mBNXKDKAShaWPEkOtA82fPJGaCkkdw/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyTAyAmCfTCz-WiUv7OJNq5V7DgLj5aH8WDFB_RGTRMnxQe6ZIUrzznDX5NmvJIXKA_/exec'; 
 
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(() => {
@@ -817,7 +820,6 @@
                                      dayPart.toString().padStart(2, '0');
                 
                 document.getElementById('tarikhBersara').value = formattedDate;
-                console.log("Tarikh Bersara dikira:", formattedDate);
                 
             } catch (error) {
                 console.error("Error calculating retirement:", error);
@@ -962,12 +964,13 @@
                 
                 console.log("Data yang akan dihantar:", data);
                 
-                // Send to Google Apps Script
+                // ==========================================
+                // FIX CORS - PENTING
+                // ==========================================
+                // Kita hantar sebagai 'Simple Request' (tanpa header JSON)
+                // Google Apps Script akan baca body sebagai string
                 const response = await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
                     body: JSON.stringify(data)
                 });
                 
@@ -987,16 +990,12 @@
                 
             } catch (error) {
                 console.error("Error submitting form:", error);
-                
                 document.getElementById('loadingOverlay').classList.add('hidden');
                 
                 let errorMessage = "Ralat sambungan. Sila cuba lagi.";
                 if (error.message.includes('Failed to fetch')) {
-                    errorMessage = "Tidak dapat menghubungi server. Sila semak sambungan internet anda.";
-                } else if (error.message.includes('405')) {
-                    errorMessage = "Ralat server. Sila hubungi pentadbir sistem.";
+                    errorMessage = "Gagal menghubungi server. Sila pastikan URL Script betul dan anda ada akses internet.";
                 }
-                
                 showError(errorMessage);
                 
                 btn.innerHTML = originalText;
@@ -1005,5 +1004,4 @@
         }
     </script>
 </body>
-
 </html>
